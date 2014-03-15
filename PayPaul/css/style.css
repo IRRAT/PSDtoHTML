@@ -3,6 +3,10 @@
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
 
+ body {
+ 	min-width: 960px;
+ }
+
 .container{
 	margin:0 auto;
 	width:940px;
