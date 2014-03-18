@@ -23,15 +23,20 @@
 	float:left;
 	height:100%;
 	font-size: 14px;
-	font-family:'pt_sansbold';
+	font-family:'pt_sansbold', sans-serif;
 	color:white;
 	text-shadow: 0px -1px 1px rgba( 0, 0, 0, 0.71 );
 	padding:0 28px;
 	border-left:1px solid #7f7e81;
 	border-right:1px solid #57565a;
-	box-shadow: 1px 0 0 0 #7f7e81,
+	box-shadow: inset 0 0 20px 7px rgba(0,0,0,0),
+				1px 0 0 0 #7f7e81,
 				-1px 0 0 0 #57565a;
 	z-index: 11;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: box-shadow 0.3s ease;
 }
 
 .header-button:hover {
@@ -60,8 +65,8 @@ form.login {
 
 	box-shadow:inset 0 1px 0 0 black,
 				inset 0 -1px 0 0 #919092;
-	font-family:helvetica ;
-    font-size: 12px;
+	font-family:helvetica, sans-serif;
+	font-size: 12px;
  
 
 }
@@ -72,50 +77,85 @@ form.login {
 }
 
 .login input:focus {
- 
-outline: 0 none;
+	outline: 0 none;
 }
 
 .login input::-webkit-input-placeholder {
-   font-family:helvetica ;
-   font-size: 12px;
-   color:white;
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color:white;
+	opacity: 1; 
+	transition: opacity 0.3s ease;
 }
  
 .login input:-moz-placeholder { /* Firefox 18- */
-  font-family:helvetica;
-  font-size: 12px;
-  color:white;
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color:white;
+	opacity: 1; 
+	transition: opacity 0.3s ease;
 }
  
 .login input::-moz-placeholder {  /* Firefox 19+ */
-   font-family:helvetica;
-   font-size: 12px;  
-   color:white;
+	font-family :helvetica, sans-serif;
+	font-size: 12px;  
+	color:white;
+	opacity: 1; 
+	transition: opacity 0.3s ease;
 }
  
 .login input:-ms-input-placeholder {
-   font-family:helvetica;
-   font-size: 12px;
-   color:white;
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color: white;
+	opacity: 1; 
+	transition: opacity 0.3s ease;
+}
+
+.login input:focus::-webkit-input-placeholder {
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color:white;
+	opacity: 0; 
+}
+ 
+.login input:focus:-moz-placeholder { /* Firefox 18- */
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color:white;
+	opacity: 0; 
+}
+ 
+.login input:focus::-moz-placeholder {  /* Firefox 19+ */
+	font-family :helvetica, sans-serif;
+	font-size: 12px;  
+	color:white;
+	opacity: 0; 
+}
+ 
+.login input:focus:-ms-input-placeholder {
+	font-family: helvetica, sans-serif;
+	font-size: 12px;
+	color: white;
+	opacity: 0; 
 }
 
 .secondary_nav {
 	height: 76px;
 	border-bottom:1px solid #fcfcfc;
 	line-height:76px;
-    box-shadow: 0.5px 0.866px 0px 0px rgb( 216, 216, 216 );
-    background: #f4f4f4;
+	box-shadow: 0.5px 0.866px 0px 0px rgb( 216, 216, 216 );
+	background: #f4f4f4;
 }
 
 .logo {
 	float: left;
-position:relative;
-display:inline-block;
-font-size: 34px;
-font-family: 'quicksandbold_italic', sans-serif;
-font-style: normal;
-letter-spacing: -0.075em;
+	position:relative;
+	display:inline-block;
+	font-size: 34px;
+	font-family: 'quicksandbold_italic', sans-serif;
+	font-style: normal;
+	letter-spacing: -0.075em;
 }
 
 .logo:after {
@@ -140,6 +180,10 @@ letter-spacing: -0.075em;
 	font-size: 7px;
 }
 
+.logo a {
+	text-decoration: none;
+}
+
 nav {
 	float: left;
 	margin-left: 43px;
@@ -154,9 +198,14 @@ nav a {
 	padding:0px 39px 0px 28px;
 	border-left:1px solid #fafafa;
 	border-right: 1px solid #ebebeb;
-	font-family:'pt_sansbold';
+	font-family:'pt_sansbold', sans-serif;
 	font-size: 14px;
 	color: rgb( 104, 103, 106 );
+}
+
+nav a:hover {
+	color: rgb(50,50,50);
+
 }
 
 nav a:last-child{
@@ -170,6 +219,9 @@ nav a:after {
 	right:23px;
 	border:4px solid transparent;
 	border-top:4px solid #c2c2c2;
+}
+nav a:hover:after {
+	border-top:4px solid rgb(50,50,50);
 }
 
 nav a:first-child:before{
@@ -192,7 +244,7 @@ nav a:first-child:before{
 .baner h1 {
 	margin-top: 53px;
 	margin-bottom: 4px;
-	font-family:Helvetica;
+	font-family:Helvetica, sans-serif;
 	font-size: 34px;
 	color:#0073bf;
 	font-weight: normal;
@@ -203,7 +255,7 @@ nav a:first-child:before{
 	margin:0;
 	margin-bottom:15px;
 	font-size: 17px;
-    font-family: "Helvetica";
+    font-family: helvetica, sans-serif;
   	color: rgb( 145, 145, 145 );
   	text-shadow: 0 1px 0px rgb( 255, 255, 255 );
 }
@@ -221,7 +273,7 @@ nav a:first-child:before{
 	position: relative;
 	padding:16px 46px 18px 23px;
 	
-	font-family: Helvetica;
+	font-family: Helvetica, sans-serif;
 	font-size: 13px;
 	text-decoration: none;
 	color: rgb( 0, 115, 191 );
@@ -256,7 +308,7 @@ nav a:first-child:before{
 	background-image: linear-gradient(0deg, rgb(31,123,229) 0%, rgb(74,155,234) 100%);
 	box-shadow: inset 0 1px 0 0 rgba(251,251,252,0.55);
 	font-size: 16px;
-  	font-family: 'pt_sansbold';
+  	font-family: 'pt_sansbold', sans-serif;
   	color: rgb( 255, 255, 255 );
   	text-shadow: 0px -1px 0px 1px rgba( 0, 0, 0, 0.71 );
 	}
@@ -272,7 +324,7 @@ nav a:first-child:before{
 .button_SignUp p {
 	margin-top:23px;
 	font-size: 13px;
- 	font-family: "Helvetica";
+ 	font-family: helvetica, sans-serif;
   	color: rgb( 103, 102, 106 );
 }
 
@@ -299,7 +351,7 @@ nav a:first-child:before{
 	margin-bottom:-5px;
 	font-weight: normal;
 	font-size: 29px;
-  	font-family: Helvetica;
+  	font-family: Helvetica, sans-serif;
   	color: rgb( 126, 126, 126 );
   	text-shadow: 0px 1px 0px rgb( 255, 255, 255 );
   	letter-spacing:0;
@@ -308,7 +360,7 @@ nav a:first-child:before{
 .feature-articles p {
 	margin-bottom:0px;
 	font-size: 13px;
-  	font-family: Helvetica;
+  	font-family: Helvetica, sans-serif;
   	line-height: 1.615;
   	color: rgb( 126, 126, 126 );
   	text-shadow: 0px 1px 0px rgb( 255, 255, 255 );
@@ -316,7 +368,7 @@ nav a:first-child:before{
 
 .feature-articles a {
 	font-size: 12px;
-  	font-family: Helvetica;
+  	font-family: Helvetica, sans-serif;
   	color: rgb( 0, 115, 191 );
   	font-weight: bold;
   	line-height: 3.417;
@@ -324,7 +376,7 @@ nav a:first-child:before{
 }
 
 .feature-articles span {
-	font-family: 'pt_sansbold';
+	font-family: 'pt_sansbold', sans-serif;
 }
 
 .icon {
@@ -373,9 +425,13 @@ nav a:first-child:before{
 	text-decoration: none;
 	color: rgb( 96, 95, 99 );
 	font-size: 12px;
-  	font-family: Helvetica;
+  	font-family: Helvetica, sans-serif;
   	font-weight: bold;
   	text-shadow: 0px 1px 0px rgb( 255, 255, 255 );
+}
+
+.feature-nav a:hover {
+	color: rgb(50,50,50);
 }
 footer {
 	padding-bottom: 90px;
@@ -397,13 +453,14 @@ footer {
 .footer-nav a {
 	text-decoration: none;
 	font-size: 12px;
-  	font-family: Helvetica;
+  	font-family: Helvetica, sans-serif;
   	color: rgb( 255, 255, 255 );
 }
+
 footer p {
 	width:780px;
   	font-size: 10px;
-  	font-family: "Helvetica";
+  	font-family: Helvetica, sans-serif;
   	color: rgb( 255, 255, 255 );
   	line-height: 2.1;
 }
